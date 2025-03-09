@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #00ff00;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 255, 0, 0.03) 2px, transparent 2px),
+              linear-gradient(90deg, rgba(0, 255, 0, 0.03) 2px, transparent 2px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: -1;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 50px 50px; }
+}
+
+.container {
+  max-width: 90vw;
+  max-height: 90vh;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  border-bottom: 1px solid #00ff00;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #00ff00;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #00ff00;
+  animation: glitch 1s infinite;
+}
+
+/* @keyframes glitch {
+  0% { text-shadow: 0 0 10px #00ff00; }
+  50% { text-shadow: -2px 0 #00ff00, 2px 2px #0f0; }
+  51% { text-shadow: 2px -2px #00ff00, -2px 2px #0f0; }
+  100% { text-shadow: 0 0 10px #00ff00; }
+} */
+
+.subtitle {
+  color: #00cc00;
+  font-size: 1.5em;
+  text-shadow: 0 0 5px #00cc00;
+}
+
+.search-box {
+  background: #111;
+  padding: 20px;
+  border: 1px solid #00ff00;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-form {
+  display: flex;
+  width: 100%;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  background: #000;
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  font-size: 1.2em;
+  outline: none;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 10px #00ff00;
+}
+
+.search-button {
+  padding: 10px 20px;
+  background: #00ff00;
+  color: #000;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.search-button:hover {
+  background: #0f0;
+  box-shadow: 0 0 15px #00ff00;
+}
+
+.shortcuts-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 25px;
+  margin-top: 25px;
+  padding: 0 25px;
+}
+
+.shortcut {
+  background: #111;
+  padding: 10px;
+  border: 1px solid #00ff00;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #00ff00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  font-size: 1.25em;
+  height: 75px;
+}
+
+.shortcut::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(0, 255, 0, 0.1),
+      transparent
+  );
+  transition: 0.5s;
+}
+
+.shortcut:hover {
+  background: #1a1a1a;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.shortcut:hover::before {
+  left: 100%;
+}
+
+@media (max-width: 1200px) {
+  .shortcuts-grid {
+      grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .shortcuts-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+  }
+  
+  .search-form {
+      flex-direction: column;
+  }
+  
+  .search-button {
+      margin-left: 0;
+      margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shortcuts-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
