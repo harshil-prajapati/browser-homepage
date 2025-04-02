@@ -212,3 +212,7 @@ h1 {
       grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.youtube{
+  color: #ff0000;
+}
