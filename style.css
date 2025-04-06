@@ -180,6 +180,7 @@ h1 {
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
   color: #00ff00;
   scale: 1.05;
+  border: 2px solid #fd5050;
 }
 
 .shortcut:hover::before {
