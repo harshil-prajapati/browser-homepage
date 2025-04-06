@@ -148,7 +148,7 @@ h1 {
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
-  color: #00ff00a6;
+  color: #00ff0040;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,9 +178,8 @@ h1 {
 .shortcut:hover {
   background: #1a1a1a;
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
-  font-size: 1.6em;
   color: #00ff00;
-  height: 80px;
+  scale: 1.05;
 }
 
 .shortcut:hover::before {
@@ -216,5 +215,5 @@ h1 {
 }
 
 .youtube{
-  color: #ff0000;
+  color: #ff000044;
 }
