@@ -65,7 +65,7 @@ header::after {
 h1 {
   font-size: 3em;
   margin-bottom: 10px;
-  text-shadow: 0 0 10px #00ff00;
+  text-shadow: 0 0 10px #00ff00eb;
   animation: glitch 1s infinite;
 }
 
@@ -77,7 +77,7 @@ h1 {
 } */
 
 .subtitle {
-  color: #00cc00;
+  color: #00cc00d0;
   font-size: 1.5em;
   text-shadow: 0 0 5px #00cc00;
 }
@@ -85,8 +85,8 @@ h1 {
 .search-box {
   background: #111;
   padding: 20px;
-  border: 1px solid #00ff00;
-  border-radius: 5px;
+  border: 1px solid #00ff00d0;
+  border-radius: 10px;
   margin-bottom: 30px;
   margin-top: 30px;
   box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
@@ -104,7 +104,7 @@ h1 {
   flex: 1;
   padding: 10px;
   background: #000;
-  border: 1px solid #00ff00;
+  border: 1px solid #00ff00a6;
   color: #00ff00;
   font-size: 1.2em;
   outline: none;
@@ -116,7 +116,7 @@ h1 {
 
 .search-button {
   padding: 10px 20px;
-  background: #00ff00;
+  background: #00ff00a6;
   color: #000;
   border: none;
   margin-left: 10px;
@@ -142,20 +142,20 @@ h1 {
 
 .shortcut {
   background: #111;
-  padding: 10px;
-  border: 1px solid #00ff00;
-  border-radius: 5px;
+  padding: 5px;
+  border: 2px solid #e34949cd;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
-  color: #00ff00;
+  color: #00ff00a6;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   position: relative;
   overflow: hidden;
-  font-size: 1.25em;
+  font-size: 1.5em;
   height: 75px;
 }
 
@@ -178,7 +178,9 @@ h1 {
 .shortcut:hover {
   background: #1a1a1a;
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
-  transform: translateY(-2px);
+  font-size: 1.6em;
+  color: #00ff00;
+  height: 80px;
 }
 
 .shortcut:hover::before {
@@ -215,5 +217,4 @@ h1 {
 
 .youtube{
   color: #ff0000;
-  font-size: 1.6em;
 }
